@@ -1,5 +1,5 @@
 // commands/dm_all.ts
-import { SlashCommandBuilder, ChatInputCommandInteraction, Client, EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, Client, EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ComponentType, InteractionContextType, PermissionFlagsBits } from 'discord.js';
 import { HELP_CATEGORIES } from '../util/help-categories';
 import { Permissions } from '../models/permissions';
 import { dm_task_model } from '../models/dm-tasks';
@@ -10,6 +10,8 @@ export default {
     require_perm: Permissions.ADMIN,
     category: HELP_CATEGORIES.UTILITY,
     data: new SlashCommandBuilder()
+        .setContexts(InteractionContextType.Guild)
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
         .setName('dm_all')
         .setDescription('Sends a direct message to all users in the server with a configurable delay')
         .addSubcommand(subcommand =>
