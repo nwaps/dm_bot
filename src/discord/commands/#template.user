@@ -1,0 +1,16 @@
+import { ApplicationCommandType, Client, ContextMenuCommandBuilder, ContextMenuCommandInteraction, PermissionFlagsBits } from 'discord.js';
+import { Permissions } from '../models/permissions';
+import { HELP_CATEGORIES } from '../util/help-categories';
+
+export default {
+    require_perm: Permissions.JANNY,
+    help: ``,
+    data: new ContextMenuCommandBuilder()
+        .setDefaultMemberPermissions(PermissionFlagsBits.ManageMessages)
+        .setName('')
+        .setType(ApplicationCommandType.User)
+    ,
+    async execute(client: Client, interaction: ContextMenuCommandInteraction) {
+        
+    },
+};

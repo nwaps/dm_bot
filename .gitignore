@@ -1,0 +1,8 @@
+node_modules/*
+config.ts
+dist/*
+.env
+bun.lock*
+package-lock.json*
+src/discord/resources/*
+!src/discord/resources/rape2.gif

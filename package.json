@@ -1,0 +1,30 @@
+{
+  "name": "tempchan",
+  "version": "1.0.0",
+  "description": "This is a light-weight livechat server",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node --es-module-specifier-resolution=node dist/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "canvas": "^3.1.2",
+    "chalk": "^4.1.2",
+    "chart.js": "^4.5.0",
+    "discord.js": "^14.19.3",
+    "dotenv": "^16.4.5",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.5.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.16",
+    "@types/mongoose": "^5.11.97",
+    "@types/pg": "^8.11.11",
+    "@types/source-map-support": "^0.5.10",
+    "source-map-support": "^0.5.21",
+    "typescript": "^5.5.4"
+  }
+}
